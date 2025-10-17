@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE Due Diligence Platform - Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: #001529;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .upload-area {
+            border: 2px dashed #d9d9d9;
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .upload-area:hover {
+            border-color: #1890ff;
+        }
+        button {
+            background: #1890ff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background: #40a9ff;
+        }
+        button:disabled {
+            background: #d9d9d9;
+            cursor: not-allowed;
+        }
+        .results {
+            display: none;
+            margin-top: 20px;
+        }
+        .metric {
+            display: inline-block;
+            text-align: center;
+            margin: 10px;
+            padding: 20px;
+            background: #f0f2f5;
+            border-radius: 8px;
+            min-width: 150px;
+        }
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1890ff;
+        }
+        .metric-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        .risk-high { color: #ff4d4f; }
+        .risk-medium { color: #faad14; }
+        .risk-low { color: #52c41a; }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .status.success { background: #f6ffed; border: 1px solid #b7eb8f; color: #52c41a; }
+        .status.error { background: #fff2f0; border: 1px solid #ffccc7; color: #ff4d4f; }
+        .status.info { background: #e6f7ff; border: 1px solid #91d5ff; color: #1890ff; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 PE Due Diligence Platform</h1>
+        <p>Private Equity Investment Analysis Tool - Quick Demo</p>
+    </div>
+
+    <div class="card">
+        <h2>📊 Sample Analysis Results</h2>
+        <p>Here's what the platform would show for Technology Solutions Inc.:</p>
+        
+        <div class="metric">
+            <div class="metric-value">$1.2M</div>
+            <div class="metric-label">DCF Valuation</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">$1.1M</div>
+            <div class="metric-label">Comparable Analysis</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">$1.3M</div>
+            <div class="metric-label">Precedent Transactions</div>
+        </div>
+        <div class="metric">
+            <div class="metric-value">$800K - $1.6M</div>
+            <div class="metric-label">Valuation Range</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>⚠️ Risk Analysis</h2>
+        <div style="margin: 20px 0;">
+            <h3 class="risk-high">🔴 HIGH RISKS (2)</h3>
+            <ul>
+                <li><strong>Customer Concentration:</strong> Top 3 customers represent 60% of revenue</li>
+                <li><strong>Market Competition:</strong> Large players entering automation space</li>
+            </ul>
+            
+            <h3 class="risk-medium">🟡 MEDIUM RISKS (1)</h3>
+            <ul>
+                <li><strong>Key Personnel Dependency:</strong> Reliance on technical team members</li>
+            </ul>
+            
+            <h3 class="risk-low">🟢 LOW RISKS (2)</h3>
+            <ul>
+                <li><strong>Regulatory Compliance:</strong> Data privacy considerations</li>
+                <li><strong>Financial Health:</strong> Strong cash flow and profitability</li>
+            </ul>
+        </div>
+        
+        <div class="status info">
+            <strong>Overall Risk Score:</strong> 45/100 (Moderate Risk)
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>💡 Key Recommendations</h2>
+        <div class="status success">
+            <strong>Negotiation Points:</strong>
+            <ul>
+                <li>Consider 10-15% price reduction for customer concentration risk</li>
+                <li>Request detailed customer contracts and retention data</li>
+                <li>Implement earnout structure tied to customer diversification</li>
+            </ul>
+        </div>
+        
+        <div class="status info">
+            <strong>Due Diligence:</strong>
+            <ul>
+                <li>Conduct customer interviews to assess satisfaction</li>
+                <li>Analyze competitive positioning in automation market</li>
+                <li>Review key personnel retention and succession plans</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📈 Investment Highlights</h2>
+        <ul>
+            <li>✅ Strong 15% annual revenue growth over 3 years</li>
+            <li>✅ Healthy 15% EBITDA margins</li>
+            <li>✅ Growing customer base (75 clients)</li>
+            <li>✅ Scalable technology platform</li>
+            <li>✅ Recurring revenue model</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🎯 Investment Recommendation</h2>
+        <div class="status success">
+            <strong>PROCEED WITH CAUTION</strong><br>
+            Target company presents moderate risk with strong growth potential. 
+            Recommend proceeding with enhanced due diligence and price adjustment 
+            for identified risks. Mid-point valuation of <strong>$1.2M</strong> 
+            recommended as starting point for negotiations.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🔧 Platform Features</h2>
+        <p>This demo shows the key outputs of the full platform:</p>
+        <ul>
+            <li><strong>Data Processing:</strong> Extracts financial metrics from CSV/Excel files</li>
+            <li><strong>Document Analysis:</strong> Processes PDF investment memos and reports</li>
+            <li><strong>Valuation Models:</strong> DCF, Comparable Analysis, Precedent Transactions</li>
+            <li><strong>Risk Assessment:</strong> AI-powered inconsistency detection</li>
+            <li><strong>Deal Recommendations:</strong> Negotiation points and due diligence focus</li>
+        </ul>
+    </div>
+
+    <script>
+        // Simple demo functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('PE Due Diligence Platform Demo Loaded');
+            
+            // Simulate loading animation
+            setTimeout(() => {
+                document.querySelector('.header').style.background = 'linear-gradient(135deg, #001529, #1890ff)';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

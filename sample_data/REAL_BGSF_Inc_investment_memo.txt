@@ -1,0 +1,228 @@
+BGSF, INC. - INVESTMENT ANALYSIS MEMORANDUM
+
+CONFIDENTIAL - FOR MONTBRIDGE DUE DILIGENCE
+
+Company: BGSF, Inc.
+Industry: Professional Staffing and Workforce Solutions
+SEC Filing: Form 8-K/A - Pro Forma Financial Statements
+Filing Date: 2025
+Source: SEC EDGAR (CIK: 1474903)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXECUTIVE SUMMARY
+
+BGSF, Inc. is a provider of professional staffing and workforce solutions operating in the United States. The Company recently divested its Professional Segment, resulting in a significant business transformation. The pro forma financial statements reflect the Company's operations after the divestiture.
+
+Key Transaction Details:
+- Sale of Professional Segment for $99.0 million
+- Debt payoff of $47.6 million
+- Transaction costs of approximately $5.0 million
+- Net proceeds: approximately $46.4 million
+
+Post-Divestiture Business Profile:
+- Pro forma revenue: $125.1 million (2023)
+- Pro forma gross profit: $49.8 million (40% margin)
+- Pro forma operating income: $3.1 million (2.5% margin)
+- Pro forma net income: $14.7 million (includes gain on sale)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BUSINESS OVERVIEW
+
+BGSF, Inc. provides workforce solutions and staffing services to businesses across various industries. The Company operates through temporary staffing, permanent placement, and workforce management services.
+
+Recent Strategic Transaction:
+The Company completed the sale of its Professional Segment, which represented a significant portion of historical operations. This divestiture was undertaken to:
+- Focus on core staffing operations
+- Reduce debt leverage
+- Streamline operations
+- Improve profitability margins
+
+Post-Transaction Focus:
+The remaining business concentrates on workforce solutions with improved operational efficiency and reduced complexity.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FINANCIAL PERFORMANCE
+
+Historical Performance (Pre-Divestiture):
+- 2021 Revenue: $313.2 million
+- 2021 Gross Profit: $111.8 million (35.7% margin)
+- 2021 Operating Loss: $(7.2) million
+- 2021 Net Loss: $(10.2) million
+
+The historical results show operational challenges with:
+- High operating expenses relative to gross profit
+- Impairment losses of $22.5 million in 2021
+- Negative operating margins
+- Significant interest expense burden
+
+Pro Forma Performance (Post-Divestiture):
+- 2023 Revenue: $125.1 million
+- 2023 Gross Profit: $49.8 million (39.8% margin)
+- 2023 Operating Income: $3.1 million (2.5% margin)
+- 2023 Net Income: $14.7 million (includes $17.7M gain on sale)
+
+Key Improvements:
+- Higher gross margin (40% vs. 36%)
+- Positive operating income
+- Reduced operating expenses
+- Lower interest expense after debt payoff
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TRANSACTION STRUCTURE
+
+Divestiture Terms:
+- Sale Price: $99.0 million cash
+- Debt Payoff: $47.6 million (credit agreement with BMO Bank)
+- Transaction Costs: $5.0 million
+- Net Cash Proceeds: $46.4 million
+
+Use of Proceeds:
+- Debt reduction: $47.6 million
+- Transaction expenses: $5.0 million
+- Remaining cash: $46.4 million for operations and growth
+
+Post-Transaction Capital Structure:
+- Significantly reduced debt burden
+- Improved liquidity position
+- Stronger balance sheet
+- Enhanced financial flexibility
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPERATIONAL ANALYSIS
+
+Cost Structure (Pro Forma 2023):
+- Revenue: $125.1 million
+- Cost of Services: $75.3 million (60.2%)
+- Gross Profit: $49.8 million (39.8%)
+- SG&A Expenses: $45.4 million (36.3%)
+- Depreciation & Amortization: $1.3 million (1.0%)
+- Operating Income: $3.1 million (2.5%)
+
+Profitability Metrics:
+- Gross Margin: 39.8% (improved from 35.7%)
+- Operating Margin: 2.5% (improved from -2.3%)
+- EBITDA: ~$4.4 million (3.5% margin)
+- Net Margin: 11.7% (includes one-time gain)
+
+Normalized Performance (Excluding Gain on Sale):
+- Normalized Net Income: ~$(3.0) million
+- Normalized EBITDA: ~$4.4 million
+- Indicates business is marginally profitable operationally
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+RISK FACTORS
+
+1. BUSINESS TRANSFORMATION RISK (HIGH)
+The Company has undergone significant restructuring with the sale of its Professional Segment. Post-divestiture performance may differ from pro forma estimates. Integration and transition risks are elevated during this period.
+
+2. REVENUE DECLINE (HIGH)
+Pro forma revenue of $125M represents a 60% decline from historical $313M. The remaining business must demonstrate sustainable growth to justify valuation.
+
+3. LOW OPERATING MARGINS (HIGH)
+Operating margin of only 2.5% provides limited buffer for operational challenges or market downturns. Cost structure needs improvement to achieve industry-standard margins.
+
+4. DEBT AND LEVERAGE (MEDIUM - IMPROVING)
+While debt was reduced through the sale proceeds, the Company still carries debt obligations. Interest expense of $1.1M annually impacts profitability.
+
+5. INDUSTRY CYCLICALITY (MEDIUM)
+Staffing industry is cyclical and sensitive to economic conditions. Economic downturn could significantly impact demand for staffing services.
+
+6. COMPETITIVE MARKET (MEDIUM)
+Staffing industry is highly competitive with numerous national and regional players. Pricing pressure and talent acquisition challenges are ongoing concerns.
+
+7. DISCONTINUED OPERATIONS IMPACT (MEDIUM)
+The pro forma statements reflect assumptions about the separation. Actual results may differ due to:
+- Transition services agreements
+- Shared services separation
+- Customer and employee retention
+- Operational disruptions
+
+8. ONE-TIME GAIN DISTORTION (LOW)
+The $17.7M gain on sale significantly inflates 2023 net income. Normalized earnings are much lower, which must be considered in valuation.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+VALUATION CONSIDERATIONS
+
+Challenges for Valuation:
+- Recent major divestiture creates uncertainty
+- Historical performance shows losses
+- Low operating margins
+- Pro forma results include one-time gain
+- Limited growth visibility
+
+Positive Factors:
+- Improved gross margins post-divestiture
+- Debt reduction improves financial flexibility
+- Focus on core business may improve efficiency
+- Staffing industry has stable demand
+
+Preliminary Assessment:
+Given the operational challenges and recent transformation, valuation should focus on:
+- Normalized EBITDA (excluding gain on sale): ~$4-5M
+- Industry multiples for staffing: 4-6x EBITDA
+- Implied enterprise value: $16-30M
+- Significant discount warranted for transformation risk
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+INVESTMENT RECOMMENDATION
+
+PROCEED WITH CAUTION - ENHANCED DUE DILIGENCE REQUIRED
+
+Strengths:
+- Real company with public financial disclosure
+- Recent debt reduction improves balance sheet
+- Improved gross margins post-divestiture
+- Staffing industry has stable long-term demand
+
+Concerns:
+- Significant business transformation in progress
+- Historical operating losses
+- Very low operating margins (2.5%)
+- Revenue decline of 60% post-divestiture
+- Limited visibility into future performance
+
+Required Due Diligence:
+1. Detailed analysis of remaining business operations
+2. Customer retention post-divestiture
+3. Management team assessment and retention
+4. Competitive positioning in core markets
+5. Path to improved operating margins
+6. Growth strategy and capital requirements
+7. Working capital and cash flow sustainability
+
+Recommendation:
+This represents a turnaround/transformation opportunity rather than a stable growth investment. Suitable for investors with:
+- Operational expertise in staffing industry
+- Ability to drive margin improvement
+- Tolerance for execution risk
+- Longer investment horizon
+
+Valuation should reflect elevated risk profile with appropriate discount to comparable transactions.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DATA SOURCE
+
+This analysis is based on:
+- SEC Form 8-K/A filing
+- Unaudited Pro Forma Consolidated Financial Statements
+- Filed with SEC in 2025
+- CIK Number: 1474903
+- Company: BGSF, Inc.
+
+All financial data is extracted from official SEC filings and represents actual reported figures.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CONFIDENTIAL - MONTBRIDGE CAPITAL PARTNERS
+For Internal Use Only
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
