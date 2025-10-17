@@ -1,0 +1,119 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                    HOW TO SHARE ON GITHUB - QUICK GUIDE                      ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+✅ STEP 1: CREATE GITHUB REPOSITORY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Go to: https://github.com/new
+
+2. Fill in:
+   - Repository name: montbridge-platform
+   - Description: AI-Powered Due Diligence & Valuation Platform for PE Firms
+   - Visibility: Public (or Private if you prefer)
+   - DO NOT initialize with README (we already have one)
+
+3. Click "Create repository"
+
+
+✅ STEP 2: PUSH YOUR CODE TO GITHUB
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Run these commands in your terminal:
+
+cd "/Users/emir/cursor practice"
+
+git remote add origin https://github.com/YOUR_USERNAME/montbridge-platform.git
+
+git branch -M main
+
+git push -u origin main
+
+
+Replace YOUR_USERNAME with your actual GitHub username!
+
+
+✅ STEP 3: SHARE THE LINK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your repository will be at:
+https://github.com/YOUR_USERNAME/montbridge-platform
+
+Share this link with:
+- Your professor
+- Group members
+- Anyone who needs access
+
+
+📋 WHAT'S INCLUDED IN THE REPOSITORY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Complete working application (index.html)
+✓ Backend Python code (app.py, src/)
+✓ All documentation files (.md files)
+✓ Word documents (.docx files)
+✓ Sample data files (sample_data/)
+✓ Setup scripts (start_*.sh)
+✓ Requirements files (requirements.txt, package.json)
+
+
+🚀 QUICK COMMANDS (Copy & Paste)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Navigate to project
+cd "/Users/emir/cursor practice"
+
+# Add remote (REPLACE YOUR_USERNAME!)
+git remote add origin https://github.com/YOUR_USERNAME/montbridge-platform.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main
+
+
+💡 FIRST TIME USING GITHUB?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+If you don't have a GitHub account:
+1. Create one at: https://github.com/signup
+2. It's free!
+3. Use your university email for student benefits
+
+If asked for credentials during push:
+- Username: your GitHub username
+- Password: use a Personal Access Token (not your password)
+  Create token at: https://github.com/settings/tokens
+
+
+🔄 TO UPDATE THE REPOSITORY LATER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After making changes:
+
+git add .
+git commit -m "Description of changes"
+git push
+
+
+✅ ALREADY DONE FOR YOU
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Git repository initialized
+✓ All files committed
+✓ .gitignore file created (excludes temporary files)
+✓ Initial commit made: "Initial commit: Montbridge Due Diligence & Valuation Platform"
+
+You just need to:
+1. Create GitHub repository
+2. Add remote
+3. Push!
+
+
+📞 NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+GitHub Help: https://docs.github.com/en/get-started
+Git Basics: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+
