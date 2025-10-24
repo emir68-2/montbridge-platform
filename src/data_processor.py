@@ -4,6 +4,19 @@ import docx
 import os
 from typing import Dict, Any, List
 import logging
+import re
+
+try:
+    import pdfplumber
+    PDFPLUMBER_AVAILABLE = True
+except ImportError:
+    PDFPLUMBER_AVAILABLE = False
+    
+try:
+    import tabula
+    TABULA_AVAILABLE = True
+except ImportError:
+    TABULA_AVAILABLE = False
 
 class DataProcessor:
     """Handles processing of both structured and unstructured data"""
@@ -62,13 +75,187 @@ class DataProcessor:
         return df
     
     def _extract_pdf_text(self, file_path: str) -> str:
-        """Extract text from PDF files"""
+        """Extract text from PDF files with enhanced table detection"""
         text = ""
-        with open(file_path, 'rb') as file:
-            pdf_reader = PyPDF2.PdfReader(file)
-            for page in pdf_reader.pages:
-                text += page.extract_text() + "\n"
+        
+        # Try advanced PDF extraction with pdfplumber (better for tables)
+        if PDFPLUMBER_AVAILABLE:
+            try:
+                text = self._extract_pdf_with_pdfplumber(file_path)
+                if text and len(text.strip()) > 100:  # If we got good content
+                    return text
+            except Exception as e:
+                self.logger.warning(f"pdfplumber extraction failed, falling back to PyPDF2: {str(e)}")
+        
+        # Fallback to PyPDF2
+        try:
+            with open(file_path, 'rb') as file:
+                pdf_reader = PyPDF2.PdfReader(file)
+                for page in pdf_reader.pages:
+                    text += page.extract_text() + "\n"
+        except Exception as e:
+            self.logger.error(f"PyPDF2 extraction failed: {str(e)}")
+            
         return text
+    
+    def _extract_pdf_with_pdfplumber(self, file_path: str) -> str:
+        """Extract text and tables from PDF using pdfplumber (better for financial statements)"""
+        text = ""
+        
+        with pdfplumber.open(file_path) as pdf:
+            for page_num, page in enumerate(pdf.pages):
+                # Extract regular text
+                page_text = page.extract_text()
+                if page_text:
+                    text += f"\n--- Page {page_num + 1} ---\n"
+                    text += page_text + "\n"
+                
+                # Extract tables
+                tables = page.extract_tables()
+                if tables:
+                    for table_num, table in enumerate(tables):
+                        text += f"\n[Table {table_num + 1}]\n"
+                        # Convert table to readable format
+                        for row in table:
+                            if row:  # Skip empty rows
+                                row_text = " | ".join([str(cell) if cell else "" for cell in row])
+                                text += row_text + "\n"
+                        text += "\n"
+        
+        return text
+    
+    def extract_pdf_tables_to_dataframes(self, file_path: str) -> List[pd.DataFrame]:
+        """Extract tables from PDF as pandas DataFrames (for financial statements)"""
+        dataframes = []
+        
+        # Try tabula-py first (excellent for table extraction)
+        if TABULA_AVAILABLE:
+            try:
+                # Extract all tables from PDF
+                tables = tabula.read_pdf(file_path, pages='all', multiple_tables=True)
+                for df in tables:
+                    if not df.empty and len(df) > 0:
+                        dataframes.append(df)
+                
+                if dataframes:
+                    self.logger.info(f"Extracted {len(dataframes)} tables from PDF using tabula")
+                    return dataframes
+            except Exception as e:
+                self.logger.warning(f"tabula extraction failed: {str(e)}")
+        
+        # Try pdfplumber as fallback
+        if PDFPLUMBER_AVAILABLE:
+            try:
+                with pdfplumber.open(file_path) as pdf:
+                    for page in pdf.pages:
+                        tables = page.extract_tables()
+                        for table in tables:
+                            if table and len(table) > 1:  # At least header + 1 row
+                                # Convert to DataFrame
+                                df = pd.DataFrame(table[1:], columns=table[0])
+                                dataframes.append(df)
+                
+                if dataframes:
+                    self.logger.info(f"Extracted {len(dataframes)} tables from PDF using pdfplumber")
+            except Exception as e:
+                self.logger.warning(f"pdfplumber table extraction failed: {str(e)}")
+        
+        return dataframes
+    
+    def extract_financial_data_from_pdf(self, file_path: str) -> Dict[str, Any]:
+        """Extract financial data from PDF financial statements"""
+        result = {
+            'text': '',
+            'tables': [],
+            'financial_figures': {},
+            'extracted_data': []
+        }
+        
+        # Extract text
+        result['text'] = self._extract_pdf_text(file_path)
+        
+        # Extract tables as DataFrames
+        result['tables'] = self.extract_pdf_tables_to_dataframes(file_path)
+        
+        # Parse financial figures from text using regex
+        result['financial_figures'] = self._extract_financial_figures_from_text(result['text'])
+        
+        # Try to identify and structure financial data from tables
+        if result['tables']:
+            for idx, df in enumerate(result['tables']):
+                structured_data = self._identify_financial_data_in_table(df)
+                if structured_data:
+                    result['extracted_data'].append({
+                        'table_index': idx,
+                        'data': structured_data
+                    })
+        
+        return result
+    
+    def _extract_financial_figures_from_text(self, text: str) -> Dict[str, Any]:
+        """Extract financial figures from text using pattern matching"""
+        figures = {}
+        
+        # Patterns for common financial metrics
+        patterns = {
+            'revenue': r'(?:revenue|sales)[\s:]+\$?\s*([\d,\.]+)\s*(?:million|m|k|thousand|billion|b)?',
+            'ebitda': r'ebitda[\s:]+\$?\s*([\d,\.]+)\s*(?:million|m|k|thousand|billion|b)?',
+            'net_income': r'(?:net income|profit)[\s:]+\$?\s*([\d,\.]+)\s*(?:million|m|k|thousand|billion|b)?',
+            'assets': r'(?:total assets)[\s:]+\$?\s*([\d,\.]+)\s*(?:million|m|k|thousand|billion|b)?',
+            'liabilities': r'(?:total liabilities)[\s:]+\$?\s*([\d,\.]+)\s*(?:million|m|k|thousand|billion|b)?',
+            'cash': r'(?:cash|cash and equivalents)[\s:]+\$?\s*([\d,\.]+)\s*(?:million|m|k|thousand|billion|b)?',
+        }
+        
+        text_lower = text.lower()
+        
+        for metric, pattern in patterns.items():
+            matches = re.findall(pattern, text_lower, re.IGNORECASE)
+            if matches:
+                # Get the first match and clean it
+                value_str = matches[0].replace(',', '')
+                try:
+                    figures[metric] = float(value_str)
+                except ValueError:
+                    pass
+        
+        return figures
+    
+    def _identify_financial_data_in_table(self, df: pd.DataFrame) -> Dict[str, Any]:
+        """Identify financial statement data in a DataFrame extracted from PDF"""
+        if df.empty or len(df) < 2:
+            return None
+        
+        financial_data = {}
+        
+        # Look for year columns and financial metrics
+        for col in df.columns:
+            col_str = str(col).lower()
+            # Check if column contains years
+            if re.match(r'^\d{4}$', str(col).strip()):
+                financial_data[col] = {}
+        
+        # Look for financial metrics in rows
+        for idx, row in df.iterrows():
+            first_col = str(row.iloc[0]).lower() if len(row) > 0 else ""
+            
+            # Common financial statement line items
+            if any(keyword in first_col for keyword in ['revenue', 'sales', 'income', 'ebitda', 'assets', 'liabilities', 'cash', 'debt']):
+                metric_name = first_col.strip()
+                
+                # Extract values for each year
+                for col in df.columns[1:]:  # Skip first column (metric names)
+                    value_str = str(row[col])
+                    # Try to convert to number
+                    value_str = value_str.replace(',', '').replace('$', '').replace('(', '-').replace(')', '').strip()
+                    try:
+                        value = float(value_str)
+                        if col not in financial_data:
+                            financial_data[col] = {}
+                        financial_data[col][metric_name] = value
+                    except ValueError:
+                        pass
+        
+        return financial_data if financial_data else None
     
     def _extract_docx_text(self, file_path: str) -> str:
         """Extract text from DOCX files"""
