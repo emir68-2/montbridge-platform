@@ -1,0 +1,9 @@
+src-frontend/
+node_modules/
+venv/
+__pycache__/
+*.pyc
+.git/
+uploads/
+*.log
+
