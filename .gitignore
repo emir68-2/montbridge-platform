@@ -31,3 +31,4 @@ package-lock.json
 # Environment
 .env
 
+src-frontend/
